@@ -1,0 +1,173 @@
+body{
+	background-color: #000;
+	color: #000;
+	margin: 20px;
+}
+
+h1{
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+}
+
+/*Grid one*/
+
+.container{
+	display: grid;
+	grid-template: repeat(2,100px) / repeat(3, 1fr);
+	grid-gap: 4px;
+}
+
+.container>div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+}
+
+.container>div:nth-child(1n){
+	background-color: #96ceb4;
+}
+
+.container>div:nth-child(2n){
+	background-color: #ff6f69;
+}
+
+.container>div:nth-child(3n){
+	background-color: #88d8b0;
+}
+
+.container>div:nth-child(4n){
+	background-color: #ffcc5c;
+}
+
+/*Layout thingy one*/
+
+.layout{
+	margin-top: 20px;
+	display: grid;
+	grid-gap: 3px;
+	grid-template-rows: 50px 200px 50px;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+		"h h h h h h h h h h h h"
+		"c c c c c c c c c c m m"
+		"f f f f f f f f f f f f"; 
+}
+
+.header{
+	grid-area: h;
+}
+
+.menu{
+	grid-area: m;
+}
+
+.content{
+	grid-area: c;
+}
+
+.footer{
+	grid-area: f;
+}
+
+.layout>div{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-size: 2em;
+}
+
+.layout>div:nth-child(1n){
+	background-color: #96ceb4;
+}
+
+.layout>div:nth-child(2n){
+	background-color: #ff6f69;
+}
+
+.layout>div:nth-child(3n){
+	background-color: #88d8b0;
+}
+
+.layout>div:nth-child(4n){
+	background-color: #ffcc5c;
+}
+
+@media screen and (max-width: 650px){
+
+	.layout{
+		grid-template-areas: 
+		"h h h h h h h h m m m m"
+		"c c c c c c c c c c c c"
+		"f f f f f f f f f f f f";
+	}
+
+}
+
+/*Autofit/Minmax*/
+
+.autofit{
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-auto-rows: 100px;
+}
+
+.autofit>div{
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.autofit>div:nth-child(1n){
+	background-color: #96ceb4;
+}
+
+.autofit>div:nth-child(2n){
+	background-color: #ff6f69;
+}
+
+.autofit>div:nth-child(3n){
+	background-color: #88d8b0;
+}
+
+.autofit>div:nth-child(4n){
+	background-color: #ffcc5c;
+}
+
+/*Image Grid*/
+
+.imgrid{
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+	grid-auto-rows: 75px;
+	grid-auto-flow: dense;
+}
+
+.imgrid>div>img{
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.horizontal{
+	grid-column: span 2;
+}
+
+.vertical{
+	grid-row: span 2;
+}
+
+.big{
+	grid-row: span 2;
+	grid-column: span 2;
+}
+
+
+
+
+
