@@ -167,6 +167,53 @@ h1{
 	grid-column: span 2;
 }
 
+/*Flexbox header and grid*/
+
+.flexandgrid{
+	display: grid;
+	grid-gap: 2px;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 50px 200px 50px;
+}
+
+.flexandgrid> .flex-header {
+    background-color: #96ceb4;
+    grid-row:1;
+    grid-column: 1/-1;	
+    display: flex;
+    justify-content: space-around;
+}
+
+/*.flex-header> div:nth-child(3){
+	margin-left: auto;
+}*/
+
+.flexandgrid>.menu {
+    background-color: #ff6f69;
+    grid-row: 2;
+    grid-column: 1/2;
+}
+
+.flexandgrid>.content {
+    background-color: #ffcc5c;
+    grid-row: 2;
+    grid-column: 2/-1;
+}
+
+.flexandgrid>.footer {
+    background-color: #88d8b0;
+    grid-row:3;
+    grid-column: 1/-1;
+}
+
+.flexandgrid > div {
+    color: #000;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
+
 
 
 
