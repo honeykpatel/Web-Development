@@ -1,4 +1,4 @@
 # Web-Development
 
-## Basic HTML/CSS ✔️
-## Basic JavaScript
+### Basic HTML/CSS ✔️
+### Basic JavaScript
